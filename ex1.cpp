@@ -27,13 +27,12 @@ int main(int argc, char **argv)
         printf("\nDeseja calcular o aumento de outro funcionário? (S/N): ");
         scanf(" %c", &continuar);
 
-        // Verificação da resposta do usuário
         if (continuar != 's' && continuar != 'S')
             break;
         else
             system("cls");
 
-    } while (1); // Loop infinito para repetir o processo conforme necessário
+    } while (1);
 
     return 0;
 }

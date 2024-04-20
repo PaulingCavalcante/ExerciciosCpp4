@@ -5,19 +5,24 @@
 int main(int argc, char **argv)
 {
     setlocale(LC_ALL, "Portuguese");
+    int num;
+
+    printf("ExercÃ­cio 2 - Multiplicador por 3");
+
+    
 
     return 0;
 }
 
-/*2. Escreva um programa que efetue a entrada de um valor numérico inteiro
+/*2. Escreva um programa que efetue a entrada de um valor numï¿½rico inteiro
 qualquer, em seguida calcule o valor multiplicando por 3 e apresente o
-resultado. Ao final da apresentação do resultado o algoritmo deve perguntar ao
-usuário se ele deseja novo cálculo.
+resultado. Ao final da apresentaï¿½ï¿½o do resultado o algoritmo deve perguntar ao
+usuï¿½rio se ele deseja novo cï¿½lculo.
 Exemplo de uso:
 Digite um valor: 4
-O resultado da multiplicação por 3 é 12.
-Deseja realizar mais um cálculo (s/n)? s
+O resultado da multiplicaï¿½ï¿½o por 3 ï¿½ 12.
+Deseja realizar mais um cï¿½lculo (s/n)? s
 Digite um valor: 6
-O resultado da multiplicação por 3 é 18.
-Deseja realizar mais um cálculo (s/n)? n
+O resultado da multiplicaï¿½ï¿½o por 3 ï¿½ 18.
+Deseja realizar mais um cï¿½lculo (s/n)? n
 Fim do programa.*/
