@@ -1,11 +1,11 @@
-#include <iostream>
 #include <stdio.h>
 #include <locale.h>
+#include <stdlib.h>
 
 int main(int argc, char **argv)
 {
-    setlocale(LC_ALL,"Portuguese");
-    
+    setlocale(LC_ALL, "Portuguese");
+
     return 0;
 }
 
