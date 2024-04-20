@@ -12,7 +12,7 @@ int main(int argc, char **argv)
     {
         printf("Exercício 1 - Calcular aumento\n");
 
-        printf("Digite seu sal?rio: ");
+        printf("Digite seu salário: ");
         scanf("%f", &salInicial);
 
         if (salInicial <= 800)
@@ -22,9 +22,9 @@ int main(int argc, char **argv)
         if (salInicial > 1000)
             salAtual = salInicial * 1.07;
 
-        printf("O sal?rio com o aumento do funcion?rio ? de: %.2f", salAtual);
+        printf("O salário com o aumento do funcionário é de: %.2f", salAtual);
 
-        printf("\n\nDeseja calcular o aumento de outro funcion?rio? (S/N): ");
+        printf("\n\nDeseja calcular o aumento de outro funcionário? (S/N): ");
         scanf(" %c", &continuar);
 
         if (continuar != 's' && continuar != 'S')
