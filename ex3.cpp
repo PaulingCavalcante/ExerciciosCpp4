@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 
         printf("O resultado da multiplicação de %i por 3 é: %i", num, num * 3);
 
-        printf("\n\nDeseja calcular o aumento de outro número? (S/N): ");
+        printf("\n\nDeseja calcular o aumento de outro funcionário? (S/N): ");
         scanf(" %c", &continuar);
 
         if (continuar != 's' && continuar != 'S')
