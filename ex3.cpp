@@ -5,18 +5,30 @@
 int main(int argc, char **argv)
 {
     setlocale(LC_ALL, "Portuguese");
-    int num;
+    int num, numNegativo;
     char continuar;
 
     while (1)
     {
-        printf("Exercício 2 - Multiplicador por 3");
-        printf("\n\nDigite um número inteiro: ");
-        scanf("%i", &num);
+        do
+        {
+            printf("Exercício 3 - Contagem regressiva");
 
-        printf("O resultado da multiplicação de %i por 3 é: %i", num, num * 3);
+            printf("\nDigite um núemero natural: ");
+            scanf("%i", &num);
 
-        printf("\n\nDeseja calcular o aumento de outro funcionário? (S/N): ");
+            if(num < 1) printf("\nDigite um número inteiro positivo!\n\n");
+
+        } while (num<1);
+
+        numNegativo = num * -1;
+
+        for (num; num >= numNegativo; num--)
+        {
+           printf("%i\n", num);
+        }
+        
+        printf("\nDeseja fazer a contagem de outro número? (S/N): ");
         scanf(" %c", &continuar);
 
         if (continuar != 's' && continuar != 'S')
@@ -28,15 +40,8 @@ int main(int argc, char **argv)
     return 0;
 }
 
-/*2. Escreva um programa que efetue a entrada de um valor num?rico inteiro
-qualquer, em seguida calcule o valor multiplicando por 3 e apresente o
-resultado. Ao final da apresenta??o do resultado o algoritmo deve perguntar ao
-usu?rio se ele deseja novo c?lculo.
+/*3. Escreva um programa que receba um valor n positivo e escreva uma contagem
+regressiva do valor até ?n. Seu programa só deve aceitar valores positivos.
 Exemplo de uso:
-Digite um valor: 4
-O resultado da multiplica??o por 3 ? 12.
-Deseja realizar mais um c?lculo (s/n)? s
-Digite um valor: 6
-O resultado da multiplica??o por 3 ? 18.
-Deseja realizar mais um c?lculo (s/n)? n
-Fim do programa.*/
+Entre com um valor positivo: 5
+5 4 3 2 1 0 -1 -2 -3 -4 -5*/
