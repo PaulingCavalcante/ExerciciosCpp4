@@ -8,28 +8,35 @@ int main(int argc, char **argv)
     int num;
     char continuar;
 
-    do{
-        printf("ExercÃ­cio 2 - Multiplicador por 3");
+    while (1)
+    {
+        printf("Exercício 2 - Multiplicador por 3");
+        printf("\n\nDigite um número inteiro: ");
+        scanf("%i", &num);
+
+        printf("O resultado da multiplicação de %i por 3 é: %i", num, num * 3);
+
+        printf("\n\nDeseja calcular o aumento de outro funcion?rio? (S/N): ");
+        scanf(" %c", &continuar);
 
         if (continuar != 's' && continuar != 'S')
             break;
         else
             system("cls");
-
-    } while (1);
+    }
 
     return 0;
 }
 
-/*2. Escreva um programa que efetue a entrada de um valor numï¿½rico inteiro
+/*2. Escreva um programa que efetue a entrada de um valor num?rico inteiro
 qualquer, em seguida calcule o valor multiplicando por 3 e apresente o
-resultado. Ao final da apresentaï¿½ï¿½o do resultado o algoritmo deve perguntar ao
-usuï¿½rio se ele deseja novo cï¿½lculo.
+resultado. Ao final da apresenta??o do resultado o algoritmo deve perguntar ao
+usu?rio se ele deseja novo c?lculo.
 Exemplo de uso:
 Digite um valor: 4
-O resultado da multiplicaï¿½ï¿½o por 3 ï¿½ 12.
-Deseja realizar mais um cï¿½lculo (s/n)? s
+O resultado da multiplica??o por 3 ? 12.
+Deseja realizar mais um c?lculo (s/n)? s
 Digite um valor: 6
-O resultado da multiplicaï¿½ï¿½o por 3 ï¿½ 18.
-Deseja realizar mais um cï¿½lculo (s/n)? n
+O resultado da multiplica??o por 3 ? 18.
+Deseja realizar mais um c?lculo (s/n)? n
 Fim do programa.*/
