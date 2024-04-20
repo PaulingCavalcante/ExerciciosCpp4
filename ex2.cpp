@@ -4,14 +4,20 @@
 
 int main(int argc, char **argv)
 {
+    setlocale(LC_ALL,"Portuguese");
     
-
     return 0;
 }
 
-/*Escreva um programa que receba o sal√°rio de um funcion√°rio e, usando a
-tabela a seguir calcule e mostre o novo sal√°rio:
-Faixa Salarial % de aumento
-At√© R$800,00 10%
-R$800,01 at√© R$1.000,00 9%
-Acima de R$1.000,00 7%*/
+/*2. Escreva um programa que efetue a entrada de um valor numÈrico inteiro
+qualquer, em seguida calcule o valor multiplicando por 3 e apresente o
+resultado. Ao final da apresentaÁ„o do resultado o algoritmo deve perguntar ao
+usu·rio se ele deseja novo c·lculo.
+Exemplo de uso:
+Digite um valor: 4
+O resultado da multiplicaÁ„o por 3 È 12.
+Deseja realizar mais um c·lculo (s/n)? s
+Digite um valor: 6
+O resultado da multiplicaÁ„o por 3 È 18.
+Deseja realizar mais um c·lculo (s/n)? n
+Fim do programa.*/

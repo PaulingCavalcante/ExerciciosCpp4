@@ -1,32 +1,46 @@
-#include <iostream>
 #include <stdio.h>
 #include <locale.h>
+#include <stdlib.h>
 
 int main(int argc, char **argv)
 {
-    setlocale(LC_ALL,"Portuguese");
+    setlocale(LC_ALL, "Portuguese");
     float salAtual, salInicial;
+    char continuar;
 
-    printf("Exerc√≠cio 1 - Calcular aumento\n");
+    do
+    {
+        printf("ExercÌcio 1 - Calcular aumento\n");
 
-    printf("Digite seu sal√°rio: ");
-    scanf("%f", &salInicial);
+        printf("Digite seu sal·rio: ");
+        scanf("%f", &salInicial);
 
-    if (salInicial <= 800)
-        salAtual = salInicial * 1.1;
-    if (salInicial > 800 && salInicial <= 1000)
-        salAtual = salInicial * 1.09;
-    if (salInicial > 1000)
-        salAtual = salInicial * 1.07;
-    
-    printf("O sal√°rio com o aumento do funcion√°rio √© de: %.2f", salAtual);
+        if (salInicial <= 800)
+            salAtual = salInicial * 1.1;
+        if (salInicial > 800 && salInicial <= 1000)
+            salAtual = salInicial * 1.09;
+        if (salInicial > 1000)
+            salAtual = salInicial * 1.07;
+
+        printf("O sal·rio com o aumento do funcion·rio È de: %.2f", salAtual);
+
+        printf("\nDeseja calcular o aumento de outro funcion·rio? (S/N): ");
+        scanf(" %c", &continuar);
+
+        // VerificaÁ„o da resposta do usu·rio
+        if (continuar != 's' && continuar != 'S')
+            break;
+        else
+            system("cls");
+
+    } while (1); // Loop infinito para repetir o processo conforme necess·rio
 
     return 0;
 }
 
-/*Escreva um programa que receba o sal√°rio de um funcion√°rio e, usando a
-tabela a seguir calcule e mostre o novo sal√°rio:
+/*Escreva um programa que receba o sal·rio de um funcion·rio e, usando a
+tabela a seguir calcule e mostre o novo sal·rio:
 Faixa Salarial % de aumento
-At√© R$800,00 10%
-R$800,01 at√© R$1.000,00 9%
+AtÈ R$800,00 10%
+R$800,01 atÈ R$1.000,00 9%
 Acima de R$1.000,00 7%*/
