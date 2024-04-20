@@ -6,10 +6,17 @@ int main(int argc, char **argv)
 {
     setlocale(LC_ALL, "Portuguese");
     int num;
+    char continuar;
 
-    printf("Exercício 2 - Multiplicador por 3");
+    do{
+        printf("Exercício 2 - Multiplicador por 3");
 
-    
+        if (continuar != 's' && continuar != 'S')
+            break;
+        else
+            system("cls");
+
+    } while (1);
 
     return 0;
 }

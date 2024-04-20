@@ -8,8 +8,7 @@ int main(int argc, char **argv)
     float salAtual, salInicial;
     char continuar;
 
-    do
-    {
+    while(1){
         printf("Exercício 1 - Calcular aumento\n");
 
         printf("Digite seu salário: ");
@@ -31,8 +30,7 @@ int main(int argc, char **argv)
             break;
         else
             system("cls");
-
-    } while (1);
+    }
 
     return 0;
 }
