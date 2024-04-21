@@ -5,73 +5,46 @@
 int main(int argc, char **argv)
 {
     setlocale(LC_ALL, "Portuguese");
-    int cod, qtd = 3;
-    float nota[qtd], maior, media;
-    char continuar;
+    int num, qtdPar = 0, qtdImpar = 0;
+    float mediaPar = 0, mediaImpar = 0;
 
-    while (1)
+    printf("Exercício 5 - impar e par");
+
+    do
     {
-        printf("ExercÃ­cio 4 - mÃ©dia dos alunos");
+        printf("\nDigite um número natural: ");
+        scanf("%i", &num);
 
-        printf("\nDigite o cÃ³digo numÃ©rico do aluno: ");
-        scanf("%i", &cod);
-
-        for (int i = 0; i < qtd; i++)
-        {
-            printf("\nDigite a nota %i: ", i + 1);
-            scanf("%f", &nota[i]);
-
-            if (nota[i] < 0 || nota[i] > 10)
-            {
-                printf("\nInvÃ¡lido! A nota de ser entre 0 e 10\n");
-                i--;
-            }
-        }
-        maior = nota[0];
-
-        for (int i = 0; i < qtd; i++)
-        {
-            if (nota[i] > maior)
-                maior = nota[i];
-        }
-
-        int teste = 1;
-
-        for (int i = 0; i < qtd; i++)
-        {
-            if (maior == nota[i] && teste)
-            {
-                nota[i] *= 4;
-                teste = 0;
-            }
-            else
-            {
-                nota[i] *= 3;
-            }
-            media += nota[i];
-        }
-
-        media /= 10;
-
-        printf("\nA mÃ©dia do aluno %i foi de: %.2f", cod, media);
-
-        printf(media >= 5 ? "\nO aluno foi aprovado!" : "\nO aluno foi reprovado!");
-
-        printf("\n\nDeseja fazer calcular a mÃ©dia de outro aluno? (S/N): ");
-        scanf(" %c", &continuar);
-
-        if (continuar != 's' && continuar != 'S')
+        if (num == 0)
             break;
-        else
-            system("cls");
-    }
-    return 0;
-}   
 
-/*4- Escreva um programa que leia o cÃ³digo de um aluno e as suas trÃªs notas.
-Calcule a mÃ©dia ponderada do aluno, considerando que o peso para a maior
-nota seja 4 e para as duas restantes 3. Mostre o cÃ³digo do aluno, suas trÃªs
-notas, a mÃ©dia calculada e uma mensagem ?Aprovado? se a mÃ©dia for maior ou
-igual a 5 e ?Reprovado? se a mÃ©dia for menor que 5. Ao final, o algoritmo deve
-perguntar ao usuÃ¡rio se ele deseja calcular uma nova mÃ©dia.
+        if (num % 2 == 0)
+        {
+            qtdPar++;
+            mediaPar += num;
+        }
+        else
+        {
+            qtdImpar++;
+            mediaImpar += num;
+        }
+    } while (num);
+
+    mediaPar /= float(qtdPar);
+    mediaImpar /= float(qtdImpar);
+
+    printf("\n\nQuantidade de números pares: %i", qtdPar);
+    printf("\nQuantidade de números ímpares: %i", qtdImpar);
+    printf("\nMédia de números pares: %.2f", mediaPar);
+    printf("\nMédia de números ímpares: %.2f", mediaImpar);
+
+    return 0;
+}
+
+/*5. Escreva um programa que leia uma quantidade não determinada de números
+positivos. Quando o usuário digitar zero, a leitura encerrará e deverá exibir:
+a. Quantidade de números pares
+b. Quantidade números ímpares
+c. Média dos números pares
+d. Média dos números ímpares
 */
