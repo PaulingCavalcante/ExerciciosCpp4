@@ -11,9 +11,9 @@ int main(int argc, char **argv)
 
     while (1)
     {
-        printf("ExercÃ­cio 4 - mÃ©dia dos alunos");
+        printf("Exercício 4 - média dos alunos");
 
-        printf("\nDigite o cÃ³digo numÃ©rico do aluno: ");
+        printf("\nDigite o código numérico do aluno: ");
         scanf("%i", &cod);
 
         for (int i = 0; i < qtd; i++)
@@ -23,7 +23,7 @@ int main(int argc, char **argv)
 
             if (nota[i] < 0 || nota[i] > 10)
             {
-                printf("\nInvÃ¡lido! A nota de ser entre 0 e 10\n");
+                printf("\nInválido! A nota de ser entre 0 e 10\n");
                 i--;
             }
         }
@@ -53,11 +53,11 @@ int main(int argc, char **argv)
 
         media /= 10;
 
-        printf("\nA mÃ©dia do aluno %i foi de: %.2f", cod, media);
+        printf("\nA média do aluno %i foi de: %.2f", cod, media);
 
         printf(media >= 5 ? "\nO aluno foi aprovado!" : "\nO aluno foi reprovado!");
 
-        printf("\n\nDeseja fazer calcular a mÃ©dia de outro aluno? (S/N): ");
+        printf("\n\nDeseja fazer calcular a média de outro aluno? (S/N): ");
         scanf(" %c", &continuar);
 
         if (continuar != 's' && continuar != 'S')
@@ -68,10 +68,10 @@ int main(int argc, char **argv)
     return 0;
 }
 
-/*4- Escreva um programa que leia o cÃ³digo de um aluno e as suas trÃªs notas.
-Calcule a mÃ©dia ponderada do aluno, considerando que o peso para a maior
-nota seja 4 e para as duas restantes 3. Mostre o cÃ³digo do aluno, suas trÃªs
-notas, a mÃ©dia calculada e uma mensagem ?Aprovado? se a mÃ©dia for maior ou
-igual a 5 e ?Reprovado? se a mÃ©dia for menor que 5. Ao final, o algoritmo deve
-perguntar ao usuÃ¡rio se ele deseja calcular uma nova mÃ©dia.
+/*4- Escreva um programa que leia o código de um aluno e as suas três notas.
+Calcule a média ponderada do aluno, considerando que o peso para a maior
+nota seja 4 e para as duas restantes 3. Mostre o código do aluno, suas três
+notas, a média calculada e uma mensagem ?Aprovado? se a média for maior ou
+igual a 5 e ?Reprovado? se a média for menor que 5. Ao final, o algoritmo deve
+perguntar ao usuário se ele deseja calcular uma nova média.
 */

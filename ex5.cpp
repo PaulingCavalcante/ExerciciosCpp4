@@ -66,7 +66,7 @@ int main(int argc, char **argv)
             system("cls");
     }
     return 0;
-}
+}   
 
 /*4- Escreva um programa que leia o código de um aluno e as suas três notas.
 Calcule a média ponderada do aluno, considerando que o peso para a maior
